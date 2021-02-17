@@ -1,15 +1,15 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
+import React from "react";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-import { durationToHuman } from '../../Helpers'
+import { durationToHuman } from "../../Helpers";
 
 const Album = ({ album, albumsPathname }) => (
   <div className="Album">
     <div className="row">
       <div className="ui middle aligned three column grid">
-        <div className="six wide column" style={{ minWidth: '212px' }}>
-          <img src={album.imageUrl} style={{ width: '212px' }} alt="album" />
+        <div className="six wide computer column" style={{ minWidth: "212px" }}>
+          <img src={album.imageUrl} style={{ width: "212px" }} alt="album" />
         </div>
         <div className="one wide column" />
         <div className="six wide column">
@@ -37,7 +37,7 @@ const Album = ({ album, albumsPathname }) => (
           </tr>
         </thead>
         <tbody>
-          {album.tracks.map(track => (
+          {album.tracks.map((track) => (
             <tr key={track.id}>
               <td>{track.trackNumber}</td>
               <td>{track.name}</td>
@@ -48,11 +48,11 @@ const Album = ({ album, albumsPathname }) => (
       </table>
     </div>
   </div>
-)
+);
 
 Album.propTypes = {
   album: PropTypes.object,
   albumsPathname: PropTypes.string,
-}
+};
 
-export default Album
+export default Album;

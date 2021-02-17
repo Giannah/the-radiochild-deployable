@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import './Header.scss'
-import Logo from '../../assets/radio.svg'
-import { client } from '../../Client'
+import React, { Component } from "react";
+import "./Header.scss";
+import Logo from "../../assets/radio.svg";
+import { client } from "../../Client";
 
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 class Header extends Component {
   render() {
@@ -16,7 +16,7 @@ class Header extends Component {
         </div>
         <div className="header-end">
           <div className="end-item">
-            {client.isLoggedIn() ? (
+            {client.isLoggedIn ? (
               <Link className="ui item" to="/logout">
                 Logout
               </Link>
@@ -28,8 +28,8 @@ class Header extends Component {
           </div>
         </div>
       </header>
-    )
+    );
   }
 }
 
-export default Header
+export default Header;

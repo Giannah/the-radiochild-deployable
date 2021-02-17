@@ -1,12 +1,12 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import PropTypes from 'prop-types'
+import React from "react";
+import { NavLink } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const VerticalMenu = ({ albums, albumsPathname }) => (
-  <div className="ui secondary vertical menu">
+  <div className="ui secondary vertical pointing menu">
     <div className="header item">Albums</div>
     {albums &&
-      albums.map(album => (
+      albums.map((album) => (
         <NavLink
           to={`${albumsPathname}/${album.id}`}
           activeClassName="active"
@@ -17,12 +17,12 @@ const VerticalMenu = ({ albums, albumsPathname }) => (
         </NavLink>
       ))}
   </div>
-)
+);
 
 VerticalMenu.propTypes = {
   albums: PropTypes.array,
   albumsPathname: PropTypes.string,
   map: PropTypes.func,
-}
+};
 
-export default VerticalMenu
+export default VerticalMenu;
